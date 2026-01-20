@@ -2,15 +2,68 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LoginPage = () => {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log("Logging in with:", { email, password });
+    setIsLoading(true);
+    setError("");
+
+    try {
+      if (email === "admin@kapor.com" && password === "123456") {
+        toast.success("Welcome back! Redirecting to your account...", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "light",
+        });
+
+        document.cookie = "auth=true; path=/";
+
+        // Delay redirect to show success message
+        setTimeout(() => {
+          router.push("/shop");
+        }, 2000);
+      } else {
+        // Show error toast for wrong credentials
+        toast.error(
+          "Invalid email or password. Please check your credentials and try again.",
+          {
+            position: "top-right",
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+          },
+        );
+      }
+    } catch (error) {
+      toast.error("Something went wrong. Please try again later.", {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -28,7 +81,7 @@ const LoginPage = () => {
         <div className="absolute bottom-16 left-16 text-white max-w-md">
           <div className="mb-4">
             <span className="text-xs uppercase tracking-[0.3em] text-white/80 font-medium">
-              Spring Collection 2024
+              Spring Collection 2026
             </span>
           </div>
           <h2 className="text-5xl font-light leading-[1.1] mb-4 font-serif">
@@ -128,6 +181,8 @@ const LoginPage = () => {
               </div>
             </div>
 
+            {error && <p className="text-sm text-red-600">{error}</p>}
+
             {/* Remember Me */}
             <div className="flex items-center justify-between py-2">
               <label className="flex items-center cursor-pointer group">
@@ -145,10 +200,11 @@ const LoginPage = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="group relative w-full bg-gray-900 py-5 text-white transition-all duration-300 hover:bg-gray-800 active:scale-[0.98] overflow-hidden"
+              disabled={isLoading}
+              className="group relative w-full bg-gray-900 py-5 text-white transition-all duration-300 hover:bg-gray-800 active:scale-[0.98] overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
             >
               <span className="relative z-10 text-sm font-semibold tracking-[0.15em] uppercase">
-                Enter Your Account
+                {isLoading ? "Signing In..." : "Enter Your Account"}
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
@@ -158,10 +214,7 @@ const LoginPage = () => {
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-200"></div>
               </div>
-              
             </div>
-
-            
           </form>
 
           {/* Sign Up Link */}
@@ -186,6 +239,24 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Toast Container */}
+      <ToastContainer
+        position="top-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        toastStyle={{
+          fontFamily: "inherit",
+          fontSize: "14px",
+        }}
+      />
     </main>
   );
 };
