@@ -1,0 +1,162 @@
+[
+  {
+    "id": "kapor-001",
+    "name": "Classic Black Shacket",
+    "price": 2999,
+    "category": "Shacket",
+    "image": "cloth1.png",
+    "description": "Premium black shacket designed for everyday casual wear."
+  },
+  {
+    "id": "kapor-002",
+    "name": "Olive Green Shacket",
+    "price": 2899,
+    "category": "Shacket",
+    "image": "cloth1.png",
+    "description": "Stylish olive green shacket with a modern relaxed fit."
+  },
+  {
+    "id": "kapor-003",
+    "name": "Denim Blue Shacket",
+    "price": 3199,
+    "category": "Shacket",
+    "image": "cloth1.png",
+    "description": "Durable denim shacket suitable for all seasons."
+  },
+  {
+    "id": "kapor-004",
+    "name": "White Oversized T-Shirt",
+    "price": 1299,
+    "category": "T-Shirt",
+    "image": "cloth1.png",
+    "description": "Soft cotton oversized t-shirt with minimal design."
+  },
+  {
+    "id": "kapor-005",
+    "name": "Black Oversized T-Shirt",
+    "price": 1399,
+    "category": "T-Shirt",
+    "image": "cloth1.png",
+    "description": "Comfortable black oversized t-shirt for daily wear."
+  },
+  {
+    "id": "kapor-006",
+    "name": "Beige Relaxed Fit T-Shirt",
+    "price": 1499,
+    "category": "T-Shirt",
+    "image": "cloth1.png",
+    "description": "Neutral beige t-shirt with a relaxed modern fit."
+  },
+  {
+    "id": "kapor-007",
+    "name": "Slim Fit Black Jeans",
+    "price": 3499,
+    "category": "Jeans",
+    "image": "cloth1.png",
+    "description": "Classic slim fit black jeans made with stretchable denim."
+  },
+  {
+    "id": "kapor-008",
+    "name": "Dark Blue Denim Jeans",
+    "price": 3599,
+    "category": "Jeans",
+    "image": "cloth1.png",
+    "description": "Timeless dark blue denim jeans with premium finishing."
+  },
+  {
+    "id": "kapor-009",
+    "name": "Light Wash Denim Jeans",
+    "price": 3399,
+    "category": "Jeans",
+    "image": "cloth1.png",
+    "description": "Light wash jeans perfect for casual summer outfits."
+  },
+  {
+    "id": "kapor-010",
+    "name": "Grey Hooded Sweatshirt",
+    "price": 2599,
+    "category": "Hoodie",
+    "image": "cloth1.png",
+    "description": "Warm grey hoodie with soft inner lining."
+  },
+  {
+    "id": "kapor-011",
+    "name": "Black Zip-Up Hoodie",
+    "price": 2799,
+    "category": "Hoodie",
+    "image": "cloth1.png",
+    "description": "Minimal black zip hoodie suitable for everyday wear."
+  },
+  {
+    "id": "kapor-012",
+    "name": "Olive Green Hoodie",
+    "price": 2699,
+    "category": "Hoodie",
+    "image": "cloth1.png",
+    "description": "Stylish olive hoodie with a comfortable relaxed fit."
+  },
+  {
+    "id": "kapor-013",
+    "name": "Formal White Shirt",
+    "price": 2299,
+    "category": "Shirt",
+    "image": "cloth1.png",
+    "description": "Classic white formal shirt made from breathable fabric."
+  },
+  {
+    "id": "kapor-014",
+    "name": "Sky Blue Casual Shirt",
+    "price": 2199,
+    "category": "Shirt",
+    "image": "cloth1.png",
+    "description": "Casual sky blue shirt perfect for smart casual looks."
+  },
+  {
+    "id": "kapor-015",
+    "name": "Checked Flannel Shirt",
+    "price": 2499,
+    "category": "Shirt",
+    "image": "cloth1.png",
+    "description": "Soft flannel checked shirt for a rugged casual style."
+  },
+  {
+    "id": "kapor-016",
+    "name": "Brown Cargo Pants",
+    "price": 3299,
+    "category": "Pants",
+    "image": "cloth1.png",
+    "description": "Functional cargo pants with multiple pockets."
+  },
+  {
+    "id": "kapor-017",
+    "name": "Black Cargo Pants",
+    "price": 3399,
+    "category": "Pants",
+    "image": "cloth1.png",
+    "description": "Modern black cargo pants with a streetwear vibe."
+  },
+  {
+    "id": "kapor-018",
+    "name": "Beige Chino Pants",
+    "price": 3199,
+    "category": "Pants",
+    "image": "cloth1.png",
+    "description": "Elegant beige chinos suitable for casual and formal wear."
+  },
+  {
+    "id": "kapor-019",
+    "name": "Minimal Black Jacket",
+    "price": 3999,
+    "category": "Jacket",
+    "image": "cloth1.png",
+    "description": "Lightweight black jacket with a clean minimal design."
+  },
+  {
+    "id": "kapor-020",
+    "name": "Olive Utility Jacket",
+    "price": 4199,
+    "category": "Jacket",
+    "image": "cloth1.png",
+    "description": "Utility-style jacket designed for durability and comfort."
+  }
+]
